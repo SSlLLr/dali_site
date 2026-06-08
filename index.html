@@ -38,6 +38,36 @@
 .feather-icon{width:40px;height:40px;display:block;margin:0 auto 8px;object-fit:contain}
 .object .feather-icon{width:44px;height:44px}
 .fact .feather-icon{width:34px;height:34px;margin:0}
+
+/* Увеличенные изображения для Блока II, задания 3 */
+section[data-nav="6. Соответствия"] .media-box{
+  max-width:1180px;
+  margin-left:auto;
+  margin-right:auto;
+}
+section[data-nav="6. Соответствия"] .media-grid.three{
+  grid-template-columns:1fr;
+  gap:22px;
+}
+section[data-nav="6. Соответствия"] .context-img{
+  width:100%;
+  max-height:560px;
+  padding:16px;
+  background:#fff;
+  object-fit:contain;
+}
+section[data-nav="6. Соответствия"] .media-figure{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:12px;
+}
+@media(max-width:760px){
+  section[data-nav="6. Соответствия"] .context-img{
+    max-height:none;
+    padding:8px;
+  }
+}
 </style>
 </head>
 <body>
@@ -117,7 +147,6 @@
 <ol><li>Откройте <a href="https://ruscorpora.ru/" rel="noreferrer" target="_blank">ruscorpora.ru</a>.</li><li>Запишите слово в графе «Введите слово или фразу».</li><li>Найдите 9-й пример: П. И. Мельников-Печерский. «На горах. Книга первая» (1875–1881). Выпишите предложение.</li></ol>
 <div class="item"><div class="field"><label>Какое слово прозвучало?</label><input data-answer="замолаживает|замолаживать|замолаживало|замолаживаетъ" data-exp="Первым словом Даля обычно называют «замолаживает»: так говорили о небе, которое заволакивается тучами." placeholder="Введите слово"/></div><div class="explain"></div></div>
 <div class="item"><div class="field"><label>Предложение из НКРЯ</label><textarea data-exp="Автоматическая проверка смотрит, есть ли в вашем примере корень «замолаж-». Главное — выписать предложение из нужного примера НКРЯ." data-keywords="замолаж" data-min="1" placeholder="Выпишите предложение"></textarea></div><div class="explain"></div></div>
-<div class="item"><div class="field"><label>Выпишите значение слова после знака ‖</label><textarea data-exp="Смысл слова: говорить глупое, болтать невпопад, не к месту. Формулировка может немного отличаться." data-keywords="болтать,глуп,некстати" data-min="2" placeholder="Введите значение"></textarea></div><div class="explain"></div></div>
 <div class="actions"><button class="btn" onclick="checkCurrent()">Проверить</button><button class="btn hint" onclick="toggleHint(this)">Подсказка</button></div><div class="hint-box">Подсказка к первому слову: оно связано с изменением погоды и затягиванием неба облаками.</div><div class="msg"></div>
 <div class="bottom"><span class="small">Кадр добавлен из презентации; само видео не встроено, чтобы файл открывался без дополнительных файлов.</span><button class="btn ghost" onclick="nextScreen()">Далее</button></div>
 </div>
@@ -158,7 +187,7 @@
 <p class="media-note">Прочитайте слово в контексте, затем выберите современное значение в списке.</p>
 </div>
 <div class="match item"><div><b>1. Ономнясь</b><br/><span class="small">Ф. М. Достоевский. «Идиот» (1869)</span></div><div class="field"><select data-answer="Недавно" data-exp="Ономнясь — недавно, на днях."><option value="">Выберите ответ</option><option>Счастье, удача, судьба</option><option>Недавно</option><option>Ошибка, промах</option></select></div><div class="explain"></div></div>
-<div class="match item"><div><b>2. Проруха</b><br/><span class="small">А. Цубин. «Путь к благополучию» (2000)</span></div><div class="field"><select data-answer="Неудача, оплошность" data-exp="Проруха — неудача, оплошность, ошибка в деле."><option value="">Выберите ответ</option><option>Неудача, оплошность</option><option>Успех</option><option>Разочарование</option></select></div><div class="explain"></div></div>
+<div class="match item"><div><b>2. Проруха</b><br/><span class="small">А. Шубин. «Путь к благополучию» (2000)</span></div><div class="field"><select data-answer="Неудача, оплошность" data-exp="Проруха — неудача, оплошность, ошибка в деле."><option value="">Выберите ответ</option><option>Неудача, оплошность</option><option>Успех</option><option>Разочарование</option></select></div><div class="explain"></div></div>
 <div class="match item"><div><b>3. Братины</b><br/><span class="small">К. Скворцов. «От кубка до рыцарского шлема»</span></div><div class="field"><select data-answer="Чашка, кружка, бокал, который обходит вкруговую" data-exp="Братина — сосуд для питья, чаша или кружка, которую пускали по кругу."><option value="">Выберите ответ</option><option>Ложки</option><option>Чашка, кружка, бокал, который обходит вкруговую</option><option>Сковородки</option></select></div><div class="explain"></div></div>
 <div class="actions"><button class="btn" onclick="checkCurrent()">Проверить</button></div><div class="msg"></div>
 <div class="bottom"><span class="small">Выберите варианты в выпадающих списках.</span><button class="btn ghost" onclick="nextScreen()">Далее</button></div>
